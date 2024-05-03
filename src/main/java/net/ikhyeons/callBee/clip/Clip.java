@@ -35,4 +35,14 @@ public class Clip {
     @ManyToOne
     @JoinColumn(name = "channel_id", nullable = false)
     private Channel channel;
+
+
+    public void delete(){
+        this.del = true;
+    }
+    public void init(String data, Member member, Channel channel){
+        this.data = data;
+        this.member = member;
+        this.channel = channel;
+    }
 }
