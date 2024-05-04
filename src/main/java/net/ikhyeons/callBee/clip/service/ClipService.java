@@ -29,6 +29,6 @@ public class ClipService {
         Clip clip = clipRepository.findById(clipId).get();
         clip.delete();
 
-        return 0L;
+        return clip.getId();
     }
 }
